@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="re">
+    <div class="main">
+    <section>
+        <img src="./image/patient.png" alt="">
+        <h1>Ramon Ridwan</h1>
+        <label>09/08/1999</label>
+    </section>
+    <section>
+        <form>
+            <label>Phone : </label> 
+            <label>Address : </label> 
+            <label>Email : </label> 
+            <label>amrad : </label> 
+            <button type="submit" id="reserver"><a>Reservez</a></button>
+            <button type="submit" id="edit" ><a>Edit info</a></button>
+            
+        </form>
+    </section>
+</div>
+<div id="popup" class="centrer">
+    <form>
+        
+        <div class="line">
+            <img src="./image/icon/calendar.svg" alt="" class="space">
+            <label class="space" >Date : </label> 
+            <input type="date" placeholder="Select Date" name="" id="" class="space">
+        </div>
+        <div class="line" class="space">
+            <img src="./image/icon/time.svg" alt="" class="space">
+            <label class="space">Time </label> 
+            <input type="time" placeholder="Hour" name="" id="" class="space">
+        </div>
+        <div class="line">
+            <img class="space" src="./image/icon/stethoscope.svg" alt="">
+            <label class="space">Speciality : </label> 
+            <select id="speciality" class="space">
+                <option value="">choose specialty</option>
+                <option value="speciality1">speciality1</option>
+                <option value="speciality2">speciality2</option>
+                <option value="speciality3">speciality3</option>
+                <option value="speciality4">speciality4</option>
+            </select>
+        </div>
+    </form>
+    <button class=" line space" id="resvalider"><a>Valider</a></button>
+</div>
+</div>
+  <div id="editPop" class="centrer">
+    <form >
+        <div class="line"> <img src="./image/icon/newimg.png" alt=""></div>
+        <div class="line" class="space">
+            <label class="space">Phone :</label> 
+            <input type="number" placeholder="Phone" name="" id="" class="space">
+        </div>
+        <div class="line" class="space">
+            <label class="space">Birthday :</label> 
+            <input type="date" placeholder="Select Date" name="" id="" class="space">
+        </div>
+        <div class="line" class="space">
+            <label class="space">Email :</label> 
+            <input type="email" placeholder="Email" name="" id="" class="space">
+        </div>
+       
+        <div class="line space">
+            <label class="space">Address :</label> 
+            <input type="number" placeholder="Address" name="" id="" class="space">
+        </div>
+        
+    </form>
+    <button class="line space" id="editvalider" ><a>Edit Valider</a></button>
+</div>
+
+<script>
+    var  reserPop =document.getElementById("reserver");
+    var popup = document.getElementById("popup");
+    var editPop =document.getElementById("editPop");
+    var edit =document.getElementById("edit");
+    var unset = document.querySelectorAll("input");
+    var unset1 =document.querySelectorAll("select");
+    var editvalider= document.getElementById("editvalider");
+    reserPop.addEventListener("click", function(e) {
+        e.preventDefault();
+    popup.style.visibility = "unset";
+    popup.style.zIndex = "3";
+    for(var i = 0; i < unset1.length; i++) {
+    unset1[i].selectedIndex =0;
+}  
+    });
+
+    edit.addEventListener("click",function(e){
+        e.preventDefault();
+        editPop.style.visibility ="unset";
+        editPop.style.visibility ="3";
+        
+    });
+    editvalider.addEventListener("click",function(e){
+        e.preventDefault();
+        editPop.style.visibility ="hidden";
+        unset.forEach(el => el.value="");
+        
+        
+    });
+    resvalider.addEventListener("click",function(e){
+        e.preventDefault();
+        popup.style.visibility ="hidden";
+        unset.forEach(el => el.value="");
+        
+    });
+
+</script>
+</body>
+</html>

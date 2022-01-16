@@ -1,0 +1,82 @@
+:root{
+    --bg-color:#D1EBFC;
+    --color:#0061FF;
+    --dark:#214975;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  'Poppins', sans-serif;;
+}
+body{
+    background-color: var(--bg-color);
+    min-height:100vh;
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vh;
+}
+
+.login-container{
+    max-width: 450px;
+    padding:24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-form{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+}
+.form-control{
+    width: 100%;
+    position: relative;
+    margin-bottom: 24px;
+}
+input, button{
+    border: 1px solid var(--color);
+    border-radius: 10px;
+    font-size: 24px;
+    background-color: var(--color);
+    letter-spacing: 0.5px;
+    padding: 14px 64px;
+    width: 60vh;
+    margin-right: 10vh;
+
+}
+
+input{
+background-color: #fff;
+color: var(--color);
+
+
+
+}
+::placeholder{
+    color: var(--bg-color);
+}
+input:focus{
+
+    outline: none;
+}
+.new-account{
+    color: var(--color);
+    margin-bottom: 20px;
+}
+@media(max-width: 780px){
+    body{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .side{
+        display: none;
+    }
+}
