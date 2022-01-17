@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awsome -->
+    <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+            integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+            crossorigin="anonymous"
+    />
+    <!-- Font Style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap" rel="stylesheet">
+    <title>Title</title>
+
+</head>
+<body>
+<!-- Edit -->
+
+<section id="popEdit" class="container edit">
+    <form method="POST" action="">
+        <div>
+            <img src="/image/icon/newimg.png" alt="">
+        </div>
+        <div class="edit-info">
+            <label>
+                <h3>Phone : </h3>
+                <input type="number"  placeholder="Phone" name="name">
+            </label>
+            <label>
+                <h3>BirthDay : </h3>
+                <input type="date"  placeholder="Date" name="birth">
+            </label>
+            <label>
+                <h3>Email : </h3>
+                <input type="email"   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  placeholder="Email" name="birth">
+            </label>
+            <label>
+                <h3>Address : </h3>
+                <input type="text"  placeholder="Adress" name="address">
+            </label>
+            <label>
+            <button id="editValid">Valid</button>
+            </label>
+        </div>
+    </form>
+    <div class="closepop" ><i class="fas fa-times-circle fa-2x"></i></div>
+</section>
+<!-- Reserve -->
+<section id="popReserve" class="container reserve">
+    <form method="POST" action="">
+        <label>
+            <div class="cc">
+                <i class="fas fa-calendar-alt fa-2x"></i>
+                <h3>Date</h3></div>
+            <input placeholder="Select Date" type="date" >
+        </label>
+        <label>
+            <div class="cc">
+                <i class="fas fa-clock fa-2x"></i>
+                <h3>Hour</h3></div>
+            <input placeholder="Select Time" type="Time" >
+        </label>
+        <label>
+            <div class="cc">
+                <i class="fas fa-stethoscope fa-2x"></i>
+                <h3>Speciality</h3></div>
+            <select id="speciality" class="space">
+                <option value="">choose specialty</option>
+                <option value="speciality1">speciality1</option>
+                <option value="speciality2">speciality2</option>
+                <option value="speciality3">speciality3</option>
+                <option value="speciality4">speciality4</option>
+            </select>
+            <button id="reserveValid">Reserve</button>
+        </label>
+    </form>
+    <div class="closepop" ><i class="fas fa-times-circle fa-2x"></i></div>
+</section>
+
+
+<!---->
+<section class="container profile">
+    <div>
+        <img alt="" src="image/patient.png">
+    </div>
+    <div class="info">
+    <h1> Roman Ridwan </h1>
+        <label>06-08-1999</label>
+        <label>Phone  :  +83 78 98 91 00</label>
+        <label>Address : Rue Hector Denis 47 B, 1050 Ixelles, Belgium</label>
+        <label>Email : Ramonridwan@protonmail.com</label>
+        <label>Speciality : qalb </label>
+        <div class="info">
+            <button id="reserve">Reserve</button>
+            <button id="edit" >Edit</button>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    /* Reservation*/
+    let reserve = document.getElementById("reserve") ;
+    let popReserve = document.getElementById("popReserve");
+    let reserveValid = document.getElementById("reserveValid");
+    reserve.addEventListener("click",function (e){
+        e.preventDefault();
+        popReserve.style.visibility="unset";
+    })
+    reserveValid.addEventListener("click",function (e){
+        e.preventDefault();
+        popReserve.style.visibility="hidden";
+    })
+    /* Edit */
+    let edit = document.getElementById("edit");
+    let popEdit = document.getElementById("popEdit");
+    let editValid =document.getElementById("editValid");
+    edit.addEventListener("click",function (e){
+        e.preventDefault();
+        popEdit.style.visibility="unset";
+
+    })
+    editValid.addEventListener("click",function (e){
+        e.preventDefault();
+        popEdit.style.visibility="hidden";
+    })
+</script>
+
+</body>
+</html>

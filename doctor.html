@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awsome -->
+    <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+            integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+            crossorigin="anonymous"
+    />
+    <!-- Font Style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap" rel="stylesheet">
+    <title>Title</title>
+
+</head>
+<body>
+<section id="popEdit" class="container edit">
+    <form method="POST" action="">
+        <div>
+            <img src="/image/icon/newimg.png" alt="">
+        </div>
+        <div class="edit-info">
+            <label>
+                <h3>Phone : </h3>
+                <input type="number"  placeholder="Phone" name="name">
+            </label>
+            <label>
+                <h3>BirthDay : </h3>
+                <input type="date"  placeholder="Date" name="birth">
+            </label>
+            <label>
+                <h3>Email : </h3>
+                <input type="email"   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  placeholder="Email" name="email">
+            </label>
+            <label>
+                <h3>Address : </h3>
+                <input type="text"  placeholder="Adress" name="address">
+            </label>
+            <label>
+            <button id="editValid">Valid</button>
+            </label>
+        </div>
+    </form>
+    <div class="closepop" ><i class="fas fa-times-circle fa-2x"></i></div>
+</section>
+
+<section class="container profile">
+    <div>
+        <img alt="" src="image/doctor.svg">
+    </div>
+    <div class="info">
+        <h1> Roman Ridwan </h1>
+        <label>06-08-1999</label>
+        <label>Phone  :  +83 78 98 91 00</label>
+        <label>Address : Rue Hector Denis 47 B, 1050 Ixelles, Belgium</label>
+        <label>Email : Ramonridwan@protonmail.com</label>
+        <label>Speciality : qalb </label>
+        <label>Experience : 5ans +1an 6 mois... </label>
+        <div class="info">
+            <button id="edit" >Edit</button>
+        </div>
+    </div>
+
+</section>
+<section >
+<section >
+    <div class="planinheader"><h1>Planing :</h1>
+    <img src="image/icon/planinig.svg" alt="">
+    </div>
+    <div>
+        <form class="container">
+            <table class="planing">
+                <tr>
+                    <th>Image</th>
+                    <th>User Name</th>
+                    <th>Email</th>
+                    <th>Description</th>
+                </tr>
+                <tr><td><img src="./image/patient1.svg" alt="">  </td>
+                    <td>Rman Ridwan</td>
+                    <td>Romanridwan@gmail.com</td>
+                    <td><button id="add" ><a class="a" >Show Profile</a></button></td></tr>
+            </table>
+        </form>
+    </div>
+</section>
+</section>
+<section id="popAdd" >
+<section class="container profile">
+    <div>
+        <img alt="" src="image/patient.png">
+    </div>
+    <div class="info">
+        <h1> Roman Ridwan </h1>
+        <label>06-08-1999</label>
+        <label>Phone  :  +83 78 98 91 00</label>
+        <label>Address : Rue Hector Denis 47 B, 1050 Micelles, Belgium</label>
+        <label>Email : Ramonridwan@protonmail.com</label>
+        <label>Speciality : qalb </label>
+    </div>
+
+</section>
+<section>
+<table class="container cas" >
+    <tr>
+        <td>Avril,Monday 2019</td>
+        <td>had khotna mrida chi merd  :) !</td>
+    </tr>
+    <tr>
+        <td>Avril,Monday 2019</td>
+        <td>had khotna mrida chi merd  :) !</td>
+    </tr>
+    <tr>
+    <div class="dis">
+        <td colspan="2">
+        <input type="text" placeholder="Write here ..." >
+        <i class="fas fa-paper-plane"></i></td>
+    </div></tr>
+</table>
+</section>
+    <div class="closepop" ><i class="fas fa-times-circle fa-2x"></i></div>
+</section>
+<script >
+    /* Edit */
+let edit = document.getElementById("edit");
+let popEdit = document.getElementById("popEdit");
+let editValid =document.getElementById("editValid");
+edit.addEventListener("click",function (e){
+e.preventDefault();
+popEdit.style.visibility="unset";
+
+})
+editValid.addEventListener("click",function (e){
+e.preventDefault();
+popEdit.style.visibility="hidden";
+})
+    let add = document.getElementById("add");
+    let popAdd = document.getElementById("popAdd");
+    add.addEventListener("click",function (e){
+        e.preventDefault();
+        popAdd.style.visibility="unset";
+        popAdd.style.position="fixed";
+    })
+
+    let close= document.getElementsByClassName("closepop");
+    close.addEventListener("click",function(e){
+        e.preventDefault();
+        popEdit.style.visibility="hidden";
+
+    })
+</script>
+</body>
+</html>
