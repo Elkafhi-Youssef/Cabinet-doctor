@@ -7,6 +7,7 @@
     <title>Admin-Doctor</title>
     <link href="./all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./admin-doctor.css">
+    <script defer src="./hamburger.js"></script>
 </head>
 <body>
     <header class="header">
@@ -26,12 +27,15 @@
         </div>
     </header>
     <div class="sidebar">
+        <div class="close">
+            <span><i class="fas fa-times fa-3x"></i></span>
+        </div>
         <div class="nav">
             <ul class="links" >
-                <li><a href="./index.html"> <span >
+                <li><a href="./admin-petient.html"> <span >
                     <i class="fas fa-user-injured"></i>
                 </span>Patient</a></li>
-                <li><a href="./gallerie.html">  <span >
+                <li><a href="./admin-doctors.html">  <span >
                     <i class="fas fa-user-nurse"></i>
                 </span>
                     Doctors</a></li>
@@ -46,6 +50,10 @@
     </div>
     <section class="content">
       <div class="head_content">
+          <div class="hamburger_menu">
+              <span style="width: 100px;">
+                <i class="fas fa-bars fa-3x"></i>
+            </span></div>
           <div class="search_bar">
                 <select class="select" name="" id="">
                     <option value="">option1</option>
